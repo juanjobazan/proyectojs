@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="">
     <title>JSAutomotores</title>
 </head>
 
@@ -13,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Imagen</a>
+                <a class="navbar-brand" href="./index.html"><img src="" width="40" height="40"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -22,16 +23,66 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                Iniciar Sesion
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade formulario" id="exampleModal2" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de Sesion</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                           <form action="" class="formulario" id="">
+                                               
+                                                <div class="formulario__grupo" id="grupo__usuario">
+                                                    <label for="usuario" class="formulario__label">Usuario</label>
+                                                    <div class="">
+                                                        <input type="text" class="formulario__input" name="usuarioI"
+                                                            id="usuarioI" placeholder="bebo23">
+                                                            <div id="idErrUser" class="form-text">Campo Usuario vacio</div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                
+                                                <div class="formulario__grupo" id="grupo__password">
+                                                    <label for="password" class="formulario__label">Contraseña</label>
+                                                    <div class="formulario__grupo-input">
+                                                        <input type="password" class="formulario__input"
+                                                            name="passwordI" id="passwordI">
+                                                        <div id="idErrPass" class="form-text">Campo Contraseña vacio
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                                    <button type="button" class="formulario__btn" id="buttonLogin"
+                                                        onclick="login()">Iniciar Sesion</button>
+
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                 Registrarme
                             </button>
 
                             <!-- Modal -->
-                            <div class="modal fade formulario" id="exampleModal" tabindex="-1"
+                            <div class="modal fade formulario" id="exampleModal1" tabindex="-1"
                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -164,10 +215,43 @@
         </nav>
     </header>
 
+    <!-- <main>
+        <form action="" class="formulario" id="">
+        
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="usuarioI"
+                        id="usuarioI" placeholder="bebo23">
+                        <div id="idErrUser" class="form-text">Campo Usuario vacio</div>
+                </div>
+                
+            </div>
+
+          
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input"
+                        name="passwordI" id="passwordI">
+                    <div id="idErrPass" class="form-text">Campo Contraseña vacio
+                    </div>
+
+                </div>
+            </div>
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="button" class="formulario__btn" id="buttonLogin"
+                    onclick="login()">Iniciar Sesion</button>
+
+            </div>
+        </form>
+    </main> -->
 
 
+<!-- <script src="./js/login.js"></script> -->
     <script src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

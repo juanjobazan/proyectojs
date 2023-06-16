@@ -9,6 +9,15 @@ const inputTelefono = document.getElementById('telefono')
 const inputCheck = document.getElementById('terminos')
 const inputErrU = document.getElementById('errusu')
 const inputErrNom = document.getElementById('errnom')
+
+
+let inputUse = document.getElementById('usuarioI')
+let inputPass = document.getElementById('passwordI')
+let divErrUser = document.getElementById('idErrUser')
+let divErrPass = document.getElementById('idErrPass')
+let buttonLogin = document.getElementById('buttonLogin')
+
+
 const userLocalStorage = JSON.parse(localStorage.getItem('usuario')) || []
 
 let arrayUser = []
@@ -22,6 +31,9 @@ if (userLocalStorage.length > 0) {
 let idU = userLocalStorage.length > 0 ? userLocalStorage[userLocalStorage.length - 1].id + 1 : 1;
 console.log(idU)
 console.log(idU - 1)
+
+divErrUser.classList = 'd-none'
+divErrPass.classList = 'd-none'
 
 const expresiones = {
     usuario: /^[a-zA-Z0-9\_\-]{4,16}$/,//letras, numeros, guion, guion bajo
@@ -44,6 +56,58 @@ const campos = {
     role: 'user'
 
 }
+
+const objetoForm = {
+    usuarioI: '',
+    passwordI: '',
+}
+
+
+const changeInput = (event) => {
+    const { name, value } = event.target
+
+
+    objetoForm[name] = value
+    switch (name) {
+        case 'usuarioI':
+            divErrUser.classList = 'd-none'
+            inputUse.classList.remove('is-invalid')
+            break;
+        case 'passwordI':
+            divErrPass.classList = 'd-none'
+            inputPass.classList.remove('is-invalid')
+            break;
+        default:
+            console.log('error no existe ese name en el objeto')
+            break;
+    }
+}
+
+
+const login = () => {
+
+    console.log(objetoForm)
+
+    const { usuarioI, passwordI } = objetoForm
+
+    const userExist = userLocalStorage.filter((usuario) => {
+        console.log(usuario.usuarioI, usuarioI)
+        usuario.usuarioI === usuarioI
+    })
+    console.log(userExist)
+    if (userExist.length > 0) {
+        console.log(userExist)
+    } else {
+        console.log(userExist)
+    }
+
+}
+
+
+inputUse.addEventListener('input', changeInput)
+inputPass.addEventListener('input', changeInput)
+buttonLogin.addEventListener('click', login)
+
 
 const cargarDatos = () => {
 
