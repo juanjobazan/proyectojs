@@ -19,6 +19,10 @@ main {
 	padding: 40px;
 }
 
+.navClass {
+    background-color:#4d899a;
+}
+
 .colo:hover{
 	color: #0075FF;
   	
@@ -28,7 +32,7 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
-	background: #f0e404;
+	background: #8cbfe6;
 }
 
 .formulario__label {
