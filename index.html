@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="">
     <title>JSAutomotores</title>
+    
 </head>
 
 <body>
     <header>
+
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html"><img src="" width="40" height="40"></a>
@@ -23,197 +25,206 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                Iniciar Sesion
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade formulario" id="exampleModal2" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de Sesion</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                           <form action="" class="formulario" id="">
-                                               
-                                                <div class="formulario__grupo" id="grupo__usuario">
-                                                    <label for="usuario" class="formulario__label">Usuario</label>
-                                                    <div class="">
-                                                        <input type="text" class="formulario__input" name="usuarioI"
-                                                            id="usuarioI" placeholder="bebo23">
-                                                            <div id="idErrUser" class="form-text">Campo Usuario vacio</div>
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                
-                                                <div class="formulario__grupo" id="grupo__password">
-                                                    <label for="password" class="formulario__label">Contraseña</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="password" class="formulario__input"
-                                                            name="passwordI" id="passwordI">
-                                                        <div id="idErrPass" class="form-text">Campo Contraseña vacio
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="formulario__grupo formulario__grupo-btn-enviar">
-                                                    <button type="button" class="formulario__btn" id="buttonLogin"
-                                                        onclick="login()">Iniciar Sesion</button>
-
-                                                </div>
-                                            </form>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                            <a class="nav-link active text-dark " aria-current="page" href="./index.html">Inicio</a>
                         </li>
+
                         <li class="nav-item">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                Registrarme
-                            </button>
+                            <a class="nav-link active text-dark " aria-current="page" href="./index.html">Nosotros</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
 
-                            <!-- Modal -->
-                            <div class="modal fade formulario" id="exampleModal1" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="" class="formulario" id="formulario">
-                                                <!-- Grupo: Usuario -->
-                                                <div class="formulario__grupo" id="grupo__usuario">
-                                                    <label for="usuario" class="formulario__label">Usuario</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="usuario"
-                                                            id="usuario" placeholder="bebo23">
-                                                        <i
-                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                            Iniciar Sesion
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade formulario" id="exampleModal2" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de Sesion</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" class="formulario" id="">
+
+                                            <div class="formulario__grupo" id="grupo__usuario">
+                                                <label for="usuario" class="formulario__label">Usuario</label>
+                                                <div class="">
+                                                    <input type="text" class="formulario__input" name="usuarioI"
+                                                        id="usuarioI" placeholder="bebo23">
+                                                    <div id="idErrUser" class="form-text">Campo Usuario vacio</div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="formulario__grupo" id="grupo__password">
+                                                <label for="password" class="formulario__label">Contraseña</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="password" class="formulario__input" name="passwordI"
+                                                        id="passwordI">
+                                                    <div id="idErrPass" class="form-text">Campo Contraseña vacio
                                                     </div>
-                                                    <p class="formulario__input-error" id="errusu">El usuario tiene que
-                                                        ser de 4 a 16 dígitos y solo puede
-                                                        contener numeros, letras y guion bajo.</p>
-                                                </div>
 
-                                                <!-- Grupo: Nombre -->
-                                                <div class="formulario__grupo" id="grupo__nombre">
-                                                    <label for="nombre" class="formulario__label">Nombre</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="nombre"
-                                                            id="nombre" placeholder="Daniel Roberto Mamani">
-                                                        <i
-                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
-                                                    </div>
-                                                    <p class="formulario__input-error" id="errnom">El usuario tiene que
-                                                        ser de 4 a 16 dígitos y solo puede
-                                                        contener numeros, letras y guion bajo.</p>
                                                 </div>
+                                            </div>
+                                            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                                <button type="button" class="formulario__btn" id="buttonLogin"
+                                                    onclick="login()">Iniciar Sesion</button>
 
-                                                <!-- Grupo: Contraseña -->
-                                                <div class="formulario__grupo" id="grupo__password">
-                                                    <label for="password" class="formulario__label">Contraseña</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="password" class="formulario__input" name="password"
-                                                            id="password">
-                                                        <i
-                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
-                                                    </div>
-                                                    <p class="formulario__input-error">La contraseña tiene que ser de 4
-                                                        a 12 dígitos.</p>
-                                                </div>
-
-                                                <!-- Grupo: Contraseña 2 -->
-                                                <div class="formulario__grupo" id="grupo__password2">
-                                                    <label for="password2" class="formulario__label">Repetir
-                                                        Contraseña</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="password" class="formulario__input"
-                                                            name="password2" id="password2">
-                                                        <i
-                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
-                                                    </div>
-                                                    <p class="formulario__input-error">Ambas contraseñas deben ser
-                                                        iguales.</p>
-                                                </div>
-
-                                                <!-- Grupo: Correo Electronico -->
-                                                <div class="formulario__grupo" id="grupo__correo">
-                                                    <label for="correo" class="formulario__label">Correo
-                                                        Electrónico</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="email" class="formulario__input" name="correo"
-                                                            id="correo" placeholder="correo@correo.com">
-                                                        <i
-                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
-                                                    </div>
-                                                    <p class="formulario__input-error">El correo solo puede contener
-                                                        letras, numeros, puntos, guiones y
-                                                        guion bajo.</p>
-                                                </div>
-
-                                                <!-- Grupo: Teléfono -->
-                                                <div class="formulario__grupo" id="grupo__telefono">
-                                                    <label for="telefono" class="formulario__label">Teléfono</label>
-                                                    <div class="formulario__grupo-input">
-                                                        <input type="text" class="formulario__input" name="telefono"
-                                                            id="telefono" placeholder="3815345455">
-                                                        <i
-                                                            class="formulario__validacion-estado fas fa-times-circle"></i>
-                                                    </div>
-                                                    <p class="formulario__input-error">El telefono solo puede contener
-                                                        numeros y el maximo son 14 dígitos.
-                                                    </p>
-                                                </div>
-
-                                                <!-- Grupo: Terminos y Condiciones -->
-                                                <div class="formulario__grupo" id="grupo__terminos">
-                                                    <label class="formulario__label">
-                                                        <input class="formulario__checkbox" type="checkbox"
-                                                            name="terminos" id="terminos">
-                                                        Acepto los Terminos y Condiciones
-                                                    </label>
-                                                </div>
-
-                                                <div class="formulario__mensaje" id="formulario__mensaje">
-                                                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
-                                                        favor rellena el formulario
-                                                        correctamente. </p>
-                                                </div>
-
-                                                <div class="formulario__grupo formulario__grupo-btn-enviar">
-                                                    <button type="submit" class="formulario__btn"
-                                                        onclick="cargarDatos()">Enviar</button>
-                                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
-                                                        Formulario enviado exitosamente!</p>
-                                                </div>
-                                            </form>
-
-                                        </div>
+                                            </div>
+                                        </form>
 
                                     </div>
+
                                 </div>
                             </div>
-                        </li>
+                        </div>
 
 
-                    </ul>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                            Registrarme
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade formulario" id="exampleModal1" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" class="formulario" id="formulario">
+                                            <!-- Grupo: Usuario -->
+                                            <div class="formulario__grupo" id="grupo__usuario">
+                                                <label for="usuario" class="formulario__label">Usuario</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="text" class="formulario__input" name="usuario"
+                                                        id="usuario" placeholder="bebo23">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                </div>
+                                                <p class="formulario__input-error" id="errusu">El usuario tiene que
+                                                    ser de 4 a 16 dígitos y solo puede
+                                                    contener numeros, letras y guion bajo.</p>
+                                            </div>
+
+                                            <!-- Grupo: Nombre -->
+                                            <div class="formulario__grupo" id="grupo__nombre">
+                                                <label for="nombre" class="formulario__label">Nombre</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="text" class="formulario__input" name="nombre"
+                                                        id="nombre" placeholder="Daniel Roberto Mamani">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                </div>
+                                                <p class="formulario__input-error" id="errnom">El usuario tiene que
+                                                    ser de 4 a 16 dígitos y solo puede
+                                                    contener numeros, letras y guion bajo.</p>
+                                            </div>
+
+                                            <!-- Grupo: Contraseña -->
+                                            <div class="formulario__grupo" id="grupo__password">
+                                                <label for="password" class="formulario__label">Contraseña</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="password" class="formulario__input" name="password"
+                                                        id="password">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                </div>
+                                                <p class="formulario__input-error">La contraseña tiene que ser de 4
+                                                    a 12 dígitos.</p>
+                                            </div>
+
+                                            <!-- Grupo: Contraseña 2 -->
+                                            <div class="formulario__grupo" id="grupo__password2">
+                                                <label for="password2" class="formulario__label">Repetir
+                                                    Contraseña</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="password" class="formulario__input" name="password2"
+                                                        id="password2">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                </div>
+                                                <p class="formulario__input-error">Ambas contraseñas deben ser
+                                                    iguales.</p>
+                                            </div>
+
+                                            <!-- Grupo: Correo Electronico -->
+                                            <div class="formulario__grupo" id="grupo__correo">
+                                                <label for="correo" class="formulario__label">Correo
+                                                    Electrónico</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="email" class="formulario__input" name="correo"
+                                                        id="correo" placeholder="correo@correo.com">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                </div>
+                                                <p class="formulario__input-error">El correo solo puede contener
+                                                    letras, numeros, puntos, guiones y
+                                                    guion bajo.</p>
+                                            </div>
+
+                                            <!-- Grupo: Teléfono -->
+                                            <div class="formulario__grupo" id="grupo__telefono">
+                                                <label for="telefono" class="formulario__label">Teléfono</label>
+                                                <div class="formulario__grupo-input">
+                                                    <input type="text" class="formulario__input" name="telefono"
+                                                        id="telefono" placeholder="3815345455">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                </div>
+                                                <p class="formulario__input-error">El telefono solo puede contener
+                                                    numeros y el maximo son 14 dígitos.
+                                                </p>
+                                            </div>
+
+                                            <!-- Grupo: Terminos y Condiciones -->
+                                            <div class="formulario__grupo" id="grupo__terminos">
+                                                <label class="formulario__label">
+                                                    <input class="formulario__checkbox" type="checkbox" name="terminos"
+                                                        id="terminos">
+                                                    Acepto los Terminos y Condiciones
+                                                </label>
+                                            </div>
+
+                                            <div class="formulario__mensaje" id="formulario__mensaje">
+                                                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
+                                                    favor rellena el formulario
+                                                    correctamente. </p>
+                                            </div>
+
+                                            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                                <button type="submit" class="formulario__btn"
+                                                    onclick="cargarDatos()">Enviar</button>
+                                                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                                                    Formulario enviado exitosamente!</p>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
 
                 </div>
             </div>
         </nav>
     </header>
+
+    <main>
+    </main>
 
     <!-- <main>
         <form action="" class="formulario" id="">
@@ -248,9 +259,9 @@
     </main> -->
 
 
-<!-- <script src="./js/login.js"></script> -->
+    <!-- <script src="./js/login.js"></script> -->
     <script src="./js/index.js"></script>
-    
+    <script src="./js/private.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">

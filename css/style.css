@@ -19,11 +19,16 @@ main {
 	padding: 40px;
 }
 
+.colo:hover{
+	color: #0075FF;
+  	
+}
+
 .formulario {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
-	background: #ABB2B9;
+	background: #f0e404;
 }
 
 .formulario__label {
@@ -171,3 +176,5 @@ main {
 	}
 }
 /*Fin de Stylo Registro*/
+
+

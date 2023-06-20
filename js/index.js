@@ -90,15 +90,30 @@ const login = () => {
 
     const { usuarioI, passwordI } = objetoForm
 
-    const userExist = userLocalStorage.filter((usuario) => {
-        console.log(usuario.usuarioI, usuarioI)
-        usuario.usuarioI === usuarioI
-    })
-    console.log(userExist)
+    const userExist = userLocalStorage.filter((usuario) => usuario.usuario === usuarioI)
+
+    const userIndex = userLocalStorage.findIndex((usuario) => usuario.usuario === usuarioI)
+
     if (userExist.length > 0) {
-        console.log(userExist)
+        userExist[0].password === passwordI
+            ?
+            userExist[0].role === 'admin'
+                ?
+                (
+                    userLocalStorage[userIndex].login = true,
+                    localStorage.setItem('usuario',JSON.stringify(userLocalStorage)),
+                    location.href = `./html/admin.html?id=${userExist[0].id}`
+                )
+
+                :
+                (
+                    userLocalStorage[userIndex].login = true,
+                    localStorage.setItem('usuario',JSON.stringify(userLocalStorage)),
+                    location.href = `./html/usuario.html?id=${userExist[0].id}`
+                )
+            : console.log('no son iguales')
     } else {
-        console.log(userExist)
+        console.log('no')
     }
 
 }
@@ -117,17 +132,17 @@ const cargarDatos = () => {
         arrayUser.push(campos)
         localStorage.setItem('usuario', JSON.stringify(arrayUser))
         console.log(arrayUser)
-        
+
         Swal.fire({
             icon: 'success',
             title: 'Excelente',
             text: 'Tu registro se realizo con Exito!',
-            preConfirm:()=>{
+            preConfirm: () => {
                 return location.reload()
             }
 
         })
-        
+
     }
 
 }
