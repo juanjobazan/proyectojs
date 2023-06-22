@@ -2,6 +2,7 @@ let userLocalStorage = JSON.parse(localStorage.getItem('usuario')) || []
 let userID = location.search.split('=')[1]
 let idInputSearc=document.getElementById('idInputSearch')
 let divCards=document.getElementById('divCards')
+
 let user = userLocalStorage.filter((usuario) => {
     return usuario.id === parseInt(userID)
 })
@@ -92,3 +93,5 @@ divCards.innerHTML=filtroAuto
 }
 
 idInputSearc.addEventListener('input',inputSearchChange)
+
+
