@@ -23,6 +23,10 @@ main {
     background-color:#4d899a;
 }
 
+#exampleModal.modal.custom-class {
+    z-index: 1029
+}
+
 .colo:hover{
 	color: #0075FF;
   	
