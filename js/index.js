@@ -53,7 +53,7 @@ const campos = {
     telefono: '',
     terminos: false,
     login: false,
-    role: 'user'
+    role: 'admin'
 
 }
 
