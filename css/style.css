@@ -201,3 +201,19 @@ main {
 	flex-direction: column;
 	overflow: hidden;
   }
+
+
+  .footer {
+    background-color: #b8c99d;
+}
+
+.footer a {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 22px;
+}
+
+.footer h5 {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 22px;
+    
+}
