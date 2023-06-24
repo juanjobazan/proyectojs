@@ -10,7 +10,7 @@ const inputCheck = document.getElementById('terminos')
 const inputErrU = document.getElementById('errusu')
 const inputErrNom = document.getElementById('errnom')
 
-
+let destacadoPrincipal=document.getElementById('destacadoPrincipal')
 let inputUse = document.getElementById('usuarioI')
 let inputPass = document.getElementById('passwordI')
 let divErrUser = document.getElementById('idErrUser')
@@ -19,6 +19,29 @@ let buttonLogin = document.getElementById('buttonLogin')
 
 
 const userLocalStorage = JSON.parse(localStorage.getItem('usuario')) || []
+const autosLS = JSON.parse(localStorage.getItem('autos'))
+
+let autoDestacado=autosLS.filter((auto)=>{
+    return auto.destacado===true
+  })
+
+  autoDestacado.length> 0 ?
+  destacadoPrincipal.innerHTML=autoDestacado
+  .map((auto)=>`
+
+  <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="${auto.foto}" class="d-block w-100" alt="...">
+    </div>
+    
+</div>
+  `
+  
+  )
+  :
+  destacadoPrincipal.innerHTML='Todavia no tenemos auto Destacado'
+
 
 let arrayUser = []
 
