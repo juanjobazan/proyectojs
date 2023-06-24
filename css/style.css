@@ -16,6 +16,10 @@ main {
 	background-color:  #fceccc;
 	flex: 1;
 }
+img {
+    max-width: 100%
+}
+
 
 .navClass {
     background-color:#4d899a;
@@ -258,4 +262,13 @@ main {
   .back-home:hover{
 	background: #222;
 	color: #ddd;
+  }
+
+
+  .error{
+	margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #E7FFFF;
   }
