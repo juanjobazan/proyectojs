@@ -20,6 +20,7 @@ const logaut = () => {
 const arrayAutos = [
   {
     id: 1,
+    codigo:1023,
     marca: 'Toyota',
     modelo: 'Etios',
     km: 33000,
@@ -33,6 +34,7 @@ const arrayAutos = [
   },
   {
     id: 2,
+    codigo:1022,
     marca: 'Puegeot',
     modelo: 207,
     km: 75000,
@@ -46,6 +48,7 @@ const arrayAutos = [
   },
   {
     id: 3,
+    codigo:1021,
     marca: 'ford',
     modelo: 'focus',
     km: 87000,
