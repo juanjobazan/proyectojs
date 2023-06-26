@@ -155,7 +155,7 @@ const deleteUser = (id) => {
 }
 
 
-const autosLS = JSON.parse(localStorage.getItem('autos'))
+const autosLS = JSON.parse(localStorage.getItem('autos')) || []
 let tBodyAutos = document.getElementById('tBodyAutos')
 
 
@@ -256,9 +256,9 @@ const changeInputAutoMarca = (event) => {
   const { value } = event.target
   newMarca = value
 }
-const changeInputAutoModelo= (event) => {
+const changeInputAutoModelo = (event) => {
   const { value } = event.target
-  newModelo= value
+  newModelo = value
 }
 const changeInputAutoKm = (event) => {
   const { value } = event.target
@@ -315,12 +315,12 @@ tBodyAutosDestacar.innerHTML = autosLS.map((auto) =>
     </tr>  `).join('')
 
 
-const destacarAuto=(id)=>{
+const destacarAuto = (id) => {
 
   let autoIndexId = autosLS.findIndex((auto) => {
     return auto.id === id
   })
-   autosLS[autoIndexId].destacado = true
+  autosLS[autoIndexId].destacado = true
   localStorage.setItem('autos', JSON.stringify(autosLS))
 
   Swal.fire({
@@ -334,3 +334,6 @@ const destacarAuto=(id)=>{
   })
 
 }
+
+
+
